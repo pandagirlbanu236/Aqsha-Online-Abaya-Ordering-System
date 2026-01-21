@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    color: #1f2d3d;
+    overflow-x: hidden;
+}
+
+
+header.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ead6ee, #a0f1ea);
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #250e2c;
+    transform: translateY(-2px);
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 140px 10% 60px; /* top padding for fixed navbar */
+    background: #fff;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1f2d3d;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 18;
+    min-width: 20px;
+}
+
+.about-image img {
+    width: 25%;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.mission-section {
+    display: flex;
+    gap: 40px;
+    padding: 60px 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mission-card {
+    flex: 1;
+    min-width: 280px;
+    background: linear-gradient(135deg, #ceb2bd, #8e7692);
+    color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+}
+
+.mission-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(90deg, #a0f1ea, #ead6ee);
+    font-size: 14px;
+    color: #fff;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+    margin-top: 60px;
+}
+
+
+@media (max-width: 900px) {
+    .about-section { flex-direction: column; gap: 30px; }
+    .mission-section { flex-direction: column; gap: 30px; }
+    nav { flex-wrap: wrap; justify-content: center; }
+    nav a { margin: 10px; }
+}

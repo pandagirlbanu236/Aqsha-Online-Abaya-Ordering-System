@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collections | AEZN Abaya Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" href="collection.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">AEZN</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="collection.html">Collections</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="cart.html" class="cart-link" id="cartIcon">
+            🛒 <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+    </nav>
+</header>
+
+<section class="collection-page">
+    <h2>Our Abaya Collections</h2>
+    <p>Discover elegant and modest abayas crafted with premium quality</p>
+
+    <div class="collection-grid">
+
+        <div class="collection-card">
+            <img src="IMAGES/A 6.jpg" alt="Classic Black Abaya">
+            <h3>Classic Black Abaya</h3>
+            <p class="price">Rs 10,500</p>
+            <button onclick="addToCart({id: '1', name: 'Classic Black Abaya', price: 'Rs 10,500', image: 'IMAGES/A 6.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+        <div class="collection-card">
+            <img src="IMAGES/A 2.jpg" alt="Grey Modern Abaya">
+            <h3>Modern Grey Abaya</h3>
+            <p class="price">Rs 11,000</p>
+            <button onclick="addToCart({id: '2', name: 'Modern Grey Abaya', price: 'Rs 11,000', image: 'IMAGES/A 2.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+        <div class="collection-card">
+            <img src="IMAGES/A 3.jpg" alt="Embroidered Abaya">
+            <h3>Embroidered Abaya</h3>
+            <p class="price">Rs 11,500</p>
+            <button onclick="addToCart({id: '3', name: 'Embroidered Abaya', price: 'Rs 11,500', image: 'IMAGES/A 3.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+        <div class="collection-card">
+            <img src="IMAGES/A 4.jpg" alt="Luxury Abaya">
+            <h3>Luxury  Abaya</h3>
+            <p class="price">Rs 14,500</p>
+            <button onclick="addToCart({id: '4', name: 'Luxury  Abaya', price: 'Rs 14,500', image: 'IMAGES/A 4.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+        <div class="collection-card">
+            <img src="IMAGES/A 8.jpg" alt="Linen Wrap Abaya">
+            <h3>Linen Wrap Abaya</h3>
+            <p class="price">Rs 10,700</p>
+            <button onclick="addToCart({id: '4', name: 'Linen Wrap Abaya', price: 'Rs 10,700', image: 'IMAGES/A 8.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+        <div class="collection-card">
+            <img src="IMAGES/A 12.jpg" alt="Elegant Brown Abaya">
+            <h3>Elegant Brown Abaya</h3>
+            <p class="price">Rs 9,500</p>
+            <button onclick="addToCart({id: '4', name: 'Elegant Brown  Abaya', price: 'Rs 9,500', image: 'IMAGES/A 12.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+         <div class="collection-card">
+            <img src="IMAGES/A 11.jpg" alt="Elegant 3 pieces Abaya">
+            <h3>Elegant 3 pieces Abaya</h3>
+            <p class="price">Rs 16,000</p>
+            <button onclick="addToCart({id: '4', name: 'Elegant 3 pieces  Abaya', price: 'Rs 16,000', image: 'IMAGES/A 11.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+        <div class="collection-card">
+            <img src="IMAGES/A 14.jpg" alt="Glitter Abaya">
+            <h3><option>Glitter Abaya</option></h3>
+            <p class="price">Rs 18,000</p>
+            <button onclick="addToCart({id: '4', name: 'Glitter  Abaya', price: 'Rs 18,000', image: 'IMAGES/A 14.jpg', size: 'M'})" class="btn">Add to Cart</button>
+        </div>
+
+
+
+
+
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 AEZN Abaya Boutique. All Rights Reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+</body>
+</html>

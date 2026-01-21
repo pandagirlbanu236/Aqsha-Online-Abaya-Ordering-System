@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart | AEZN Abaya Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">AEZN</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="collection.html">Collections</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="cart.html" class="cart-link" id="cartIcon">
+            🛒 <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+    </nav>
+</header>
+
+<section class="cart-page">
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <p class="cart-subtitle">Review your items and proceed to checkout</p>
+        
+        <div class="cart-content">
+            <div class="cart-items-section">
+                <div id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-item">
+                    <span>Items (<span id="cartCount">0</span>):</span>
+                    <span id="itemCount">0</span>
+                </div>
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span id="cartTotal">Rs 0</span>
+                </div>
+                <div class="summary-item delivery">
+                    <span>Delivery:</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total:</span>
+                    <span id="finalTotal">Rs 0</span>
+                </div>
+                
+                <a href="Order.html" class="checkout-btn btn">Proceed to Checkout</a>
+                <a href="collection.html" class="continue-shopping btn">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 AEZN Abaya Boutique. All Rights Reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+    // Update final total when cart changes
+    function updateCartSummary() {
+        const total = calculateTotal();
+        const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+        
+        document.getElementById('finalTotal').textContent = `Rs ${total.toLocaleString()}`;
+        document.getElementById('itemCount').textContent = itemCount;
+    }
+    
+    // Override displayCartItems to also update summary
+    const originalDisplayCartItems = displayCartItems;
+    displayCartItems = function() {
+        originalDisplayCartItems();
+        updateCartSummary();
+    };
+    
+    // Initial load
+    displayCartItems();
+</script>
+
+</body>
+</html>
+
+
